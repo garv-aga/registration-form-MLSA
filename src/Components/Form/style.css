@@ -170,6 +170,20 @@ textarea:focus {
   align-items: center;
   justify-content: center;
 }
+
+/* Changes made by harsh */
+.registrationInputField .invalidInput{
+  background: #FDD8D8; 
+  border: 1px solid #F94545;
+}
+.registrationInputField .invalidInput:hover{
+  border: 1px solid #F94545;
+  
+}
+.registrationInputField input::-webkit-inner-spin-button,
+.registrationInputField input::-webkit-outer-spin-button{
+  -webkit-appearance:none;
+}
 @media only screen and (max-width: 480px) {
   .registrationForm {
     width: 100%;
@@ -199,6 +213,11 @@ textarea:focus {
   }
 }
 
+.submitBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 /* TopHeader Css */

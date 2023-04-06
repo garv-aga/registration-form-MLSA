@@ -1,6 +1,6 @@
 import React from 'react'
 import "./style.css"
-import checkedIcon from "../../../public/assets/check.svg";
+import checkedIcon from "/assets/check.svg";
 function ThankYou() {
   return (
     <div className='registrationThankYou'>

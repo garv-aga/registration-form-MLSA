@@ -1,5 +1,5 @@
 import React from 'react'
-import docsIcon from "../../../public/assets/docs.svg";
+import docsIcon from "/assets/docs.svg";
 const TopHeader = () => {
   return (
     <div className='TopHeaderContainer'>
