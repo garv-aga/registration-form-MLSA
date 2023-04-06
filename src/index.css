@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 62.5%;
+  }
+  .registrationHomepage{
+    display:flex;
+  }
+  .registrationSecondpage{
+    display: flex;
+  }
+
+
+  @media only screen and (max-width: 480px){
+     .registrationHomepage{
+      flex-direction: column;
+     }
+     .registrationSecondpage{
+      flex-direction: column;
+     }
+  }

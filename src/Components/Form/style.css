@@ -1,0 +1,214 @@
+.registrationForm {
+  background-color: #ffffff;
+  width: 48.2rem;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* position: relative; */
+}
+
+.registrationForm::-webkit-scrollbar {
+  display: none;
+}
+
+.formPadding {
+  margin-top: 2.3rem;
+}
+
+.registrationFormContainer {
+  margin-left: 6.8rem;
+  margin-right: 5.9rem;
+}
+
+.formFirstHeading {
+  margin-top: 9.1rem;
+  padding-left: 0.9rem;
+}
+
+.registrationFormHeading {
+  height: 1.9rem;
+}
+
+.registrationFormHeading p {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.9rem;
+  color: #3b61cf;
+  padding-bottom: 4px;
+  position: relative;
+  text-decoration: none;
+}
+
+.registrationFormHeading p::after {
+  background: #f00;
+  background: linear-gradient(to right, #286fd9 50%, transparent 100%);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width:100%;
+}
+
+.registrationInputField label {
+  margin-top: 1.2rem;
+  display: block;
+  height: 1.9rem;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #000000;
+  padding-left: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.registrationInputField input {
+  /* width: 35.5rem; */
+  width:100%;
+  height: 3.5rem;
+  background: #e1edff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-indent: 1rem;
+}
+
+.registrationInputField textarea {
+  /* width: 35.5rem; */
+  width: 100%;
+  height: 11.5rem;
+  background: #e1edff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-indent: 1rem;
+  padding-top: 0.7rem;
+}
+
+.registrationInputField textarea ::placeholder {
+  padding-top: 3rem;
+  height: 1.6rem;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #8f8f8f;
+}
+
+.registrationInputField input::placeholder {
+  height: 1.6rem;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #8f8f8f;
+}
+
+.registrationInputField input:hover,
+textarea:hover {
+  border: 1px solid #286fd9;
+}
+
+.registrationInputField input:focus,
+textarea:focus {
+  outline: 1px solid #286fd9;
+}
+
+.registrationFormErrorMessage {
+  display: flex;
+  margin-top: 0.7rem;
+}
+
+.registrationFormErrorMessage p {
+  margin-left: 0.5rem;
+  height: 1.3rem;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: #f94545;
+}
+
+.registrationFormButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.9rem;
+  padding-bottom: 2rem;
+}
+
+.registrationFormButtonContainer Button {
+  padding: 1.1rem 2.1rem;
+  border-radius: 10rem;
+  background: linear-gradient(98.63deg, #3b61cf 3.76%, #3babcf 114.18%);
+  border: none;
+  height: 32px;
+  width: 89px;
+  font-size: 1.3rem;
+  color: #ffffff; 
+  text-align: center;
+  cursor: pointer;
+}
+
+.registrationFormELLipse{
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  left: 77.4rem;
+  top: 7.5rem;
+  background: #ffffff;
+  border: 1px solid #3babcf;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 480px) {
+  .registrationForm {
+    width: 100%;
+    margin-top:-20px;
+    border-radius: 10px 10px 0px 0px;
+    height: 100%;
+  }
+  .registrationFormContainer {
+    margin-left: 1.85rem;
+    margin-right: 1.85rem;
+  }
+  .formFirstHeading{
+    margin-top:3.5rem;
+  }
+  .registrationFormELLipse{
+    left: 1.2rem;
+    top: 9.3rem;
+  }
+  
+}
+@media (min-width:481px) and (max-width: 768px){
+  .registrationFormELLipse{
+    display: none;
+  }
+  .registrationInputField label{
+    margin-top: 2.5rem;
+  }
+}
+
+
+
+/* TopHeader Css */
+/* .TopHeaderContainer{
+  width: 100%;
+  height:4rem;
+  position: relative;
+  border: 2px solid red;
+}
+.registrationFormELLipse{
+  top: 20%;
+  position: absolute;
+} */

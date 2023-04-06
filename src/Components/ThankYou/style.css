@@ -1,0 +1,84 @@
+.registrationThankYou {
+  width: 48.2rem;
+  background: #ffffff;
+  height: 100%;
+  position: relative;
+
+}
+.registrationThankYouContainer {
+  margin-left: 6.4rem;
+  margin-right: 7.5rem;
+  margin-top: 10.7rem;
+  
+}
+.registrationThankYouContainer h5 {
+  /* width: 16.7rem; */
+  /* height: 1.9rem; */
+  width:100%;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #3b61cf;
+  padding-left: 0.15rem;
+  box-shadow: 0px 0.5rem rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid #3b61cf;
+}
+.registrationThankYouContent p {
+  /* height: 3.8rem; */
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #000000;
+  padding-top: 0.65rem;
+}
+.registrationThankYouSpan {
+  /* height: 3.8rem; */
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #286fd9;
+  padding-top: 0.65rem;
+}
+.registrationThankYouELLipse {
+  width: 5rem;
+  height: 5rem;
+  left: -2.7rem;
+  top: 7.5rem;
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #3babcf;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 480px) {
+  .registrationThankYou {
+    width: 100%;
+    margin-top: -20px;
+    border-radius: 10px 10px 0px 0px;
+    height: 100%;
+  }
+  .registrationThankYouContainer {
+    margin-left: 1.85rem;
+    margin-right: 1.85rem;
+    margin-top: 3.5rem;
+  }
+  .registrationThankYouELLipse{
+    left: 1.9rem;
+    top: -2.6rem;
+  }
+
+}
+@media (min-width:481px) and (max-width: 768px){
+  .registrationThankYouContainer {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}

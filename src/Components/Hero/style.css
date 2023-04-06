@@ -1,0 +1,62 @@
+.registrationHero {
+  background: url("../../../assets/HeroImage.png") no-repeat;
+  width: 79.8rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 7.9rem;
+  background-size: cover; 
+  /* position: relative; */
+
+}
+.registrationHeroContent {
+  width: 33.7rem;
+  height: 12rem;
+
+}
+.registrationHeroContent h3 {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 4rem;
+  color: #000000;
+}
+.registrationHeroContentSpan {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 4rem;
+  color: #3b61cf;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 480px) {
+  .registrationHero {
+    width: 100%;
+    height: 22.1rem;
+    padding-left: 2rem;
+  }
+  .registrationHeroContent {
+    margin-top: 6.1rem;
+  }
+  .registrationHeroContent h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .registrationHeroContentSpan {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .registrationHero {
+    width: 65rem;
+    padding-left: 4rem;
+  }
+}
