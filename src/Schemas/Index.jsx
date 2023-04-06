@@ -10,5 +10,5 @@ export const signUpSchema = Yup.object({
   phoneNumber: Yup.string().min(10).max(15).required("Phone Number Required").matches("^[0-9]*$"),
   linkedin: Yup.string().min(2).max(100).required("Linkedin Required"),
   github: Yup.string().min(2).max(100).required("Github Required"),
-  expectation: Yup.string()
+  expectation: Yup.string(),
 });
