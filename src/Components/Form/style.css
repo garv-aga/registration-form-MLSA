@@ -49,7 +49,7 @@
   bottom: 0;
   left: 0;
   height: 1px;
-  width:100%;
+  width: 100%;
 }
 
 .registrationInputField label {
@@ -68,7 +68,7 @@
 
 .registrationInputField input {
   /* width: 35.5rem; */
-  width:100%;
+  width: 100%;
   height: 3.5rem;
   background: #e1edff;
   border: none;
@@ -152,12 +152,12 @@ textarea:focus {
   height: 32px;
   width: 89px;
   font-size: 1.3rem;
-  color: #ffffff; 
+  color: #ffffff;
   text-align: center;
   cursor: pointer;
 }
 
-.registrationFormELLipse{
+.registrationFormELLipse {
   width: 5rem;
   height: 5rem;
   position: absolute;
@@ -172,22 +172,21 @@ textarea:focus {
 }
 
 /* Changes made by harsh */
-.registrationInputField .invalidInput{
-  background: #FDD8D8; 
-  border: 1px solid #F94545;
+.registrationInputField .invalidInput {
+  background: #fdd8d8;
+  border: 1px solid #f94545;
 }
-.registrationInputField .invalidInput:hover{
-  border: 1px solid #F94545;
-  
+.registrationInputField .invalidInput:hover {
+  border: 1px solid #f94545;
 }
 .registrationInputField input::-webkit-inner-spin-button,
-.registrationInputField input::-webkit-outer-spin-button{
-  -webkit-appearance:none;
+.registrationInputField input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 @media only screen and (max-width: 480px) {
   .registrationForm {
     width: 100%;
-    margin-top:-20px;
+    margin-top: -20px;
     border-radius: 10px 10px 0px 0px;
     height: 100%;
   }
@@ -195,30 +194,28 @@ textarea:focus {
     margin-left: 1.85rem;
     margin-right: 1.85rem;
   }
-  .formFirstHeading{
-    margin-top:3.5rem;
+  .formFirstHeading {
+    margin-top: 3.5rem;
   }
-  .registrationFormELLipse{
+  .registrationFormELLipse {
     left: 1.2rem;
     top: 9.3rem;
   }
-  
 }
-@media (min-width:481px) and (max-width: 768px){
-  .registrationFormELLipse{
+@media (min-width: 481px) and (max-width: 768px) {
+  .registrationFormELLipse {
     display: none;
   }
-  .registrationInputField label{
+  .registrationInputField label {
     margin-top: 2.5rem;
   }
 }
 
-.submitBtn{
+.submitBtn {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 /* TopHeader Css */
 /* .TopHeaderContainer{

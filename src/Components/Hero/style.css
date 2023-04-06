@@ -6,14 +6,12 @@
   align-items: center;
   justify-content: flex-start;
   padding-left: 7.9rem;
-  background-size: cover; 
+  background-size: cover;
   /* position: relative; */
-
 }
 .registrationHeroContent {
   width: 33.7rem;
   height: 12rem;
-
 }
 .registrationHeroContent h3 {
   font-family: "Segoe UI";
@@ -31,7 +29,6 @@
   line-height: 4rem;
   color: #3b61cf;
 }
-
 
 /* media queries */
 
@@ -52,7 +49,6 @@
     font-size: 1.5rem;
     line-height: 2rem;
   }
-  
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .registrationHero {
