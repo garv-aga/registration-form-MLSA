@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
-import docsIcon from "/assets/docs.svg";
-import TopHeader from "./TopHeader";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { signUpSchema } from "../../Schemas/Index";

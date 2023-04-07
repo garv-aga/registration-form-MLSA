@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import mlsaLogo from "/assets/mlsaLogo.svg";
+
 export default function Navbar() {
   return (
     <div className="registrationNavbar">

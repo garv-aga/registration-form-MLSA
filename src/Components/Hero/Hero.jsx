@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import docsIcon from "/assets/docs.svg";
+
 export default function Hero() {
   return (
     <div className="registrationHero">
