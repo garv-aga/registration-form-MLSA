@@ -28,7 +28,13 @@ const Form = () => {
     initialValues: initialValues,
     validationSchema: signUpSchema,
     onSubmit: async (values, action) => {
-      const res = await axios.post("/api/save-response", values);
+      let res;
+      try {
+        res = await axios.post("/api/save-response", values);        
+      } catch (error) {
+        errNotify(error);
+      }
+
 
       if (res.status === 200) {
         action.resetForm();
