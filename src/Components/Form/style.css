@@ -198,11 +198,11 @@ textarea:focus {
     margin-top: 3.5rem;
   }
   .registrationFormELLipse {
-    left: 1.2rem;
-    top: 9.3rem;
+    left: 2.2rem;
+    top: 17.3rem;
   }
 }
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 1269px) {
   .registrationFormELLipse {
     display: none;
   }

@@ -5,6 +5,7 @@ import { useFormik } from "formik";
 import { signUpSchema } from "../../Schemas/Index";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import docsIcon from "/assets/docs.svg";
 
 const errNotify = (msg) => toast.error(msg);
 
@@ -49,6 +50,9 @@ const Form = () => {
     <>
       <Toaster position="bottom-right" reverseOrder={false} />
       <div className="registrationForm">
+      <div className='registrationFormELLipse'>
+      <img src={docsIcon}/>
+      </div>
         <div className="registrationFormContainer">
           <form onSubmit={handleSubmit}>
             <div className="registrationFormHeading formFirstHeading">
