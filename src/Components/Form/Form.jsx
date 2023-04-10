@@ -192,7 +192,7 @@ const Form = () => {
               <p>Survey information</p>
             </div>
             <div className="registrationInputField">
-              <label htmlFor="expectation">What Do You Expect From This Event?</label>
+              <label htmlFor="expectation">What Do You Expect From This Event ? </label>
               <textarea
                 onChange={handleChange}
                 onBlur={handleBlur}
