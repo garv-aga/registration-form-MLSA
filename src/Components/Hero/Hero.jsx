@@ -9,7 +9,7 @@ export default function Hero() {
           Microsoft Learn <span className="registrationHeroContentSpan">Student</span>
         </h3>
         <h3>Ambassador</h3>
-        <h3>Kiit Chapter</h3>
+        <h3>KIIT Chapter</h3>
       </div>
     </div>
   );

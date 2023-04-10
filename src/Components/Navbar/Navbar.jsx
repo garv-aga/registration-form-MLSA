@@ -7,7 +7,7 @@ export default function Navbar() {
     <div className="registrationNavbar">
       <div className="registrationNavbarLogo">
         <img src={mlsaLogo} />
-        <h3>MLSA</h3>
+        <h3>MLSA, KIIT Chapter</h3>
       </div>
     </div>
   );

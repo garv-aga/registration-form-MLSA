@@ -88,7 +88,7 @@ const Form = () => {
               />
             </div>
             <div className="registrationInputField">
-              <label htmlFor="currentYear">Current Year</label>
+              <label htmlFor="currentYear">Current Year of Study</label>
               <input
                 type="number"
                 autoComplete="off"
@@ -116,7 +116,7 @@ const Form = () => {
               />
             </div>
             <div className="registrationInputField">
-              <label htmlFor="kiitEmailId">Kiit Email Id</label>
+              <label htmlFor="kiitEmailId">KIIT Email ID</label>
               <input
                 type="email"
                 autoComplete="off"
@@ -130,7 +130,7 @@ const Form = () => {
               />
             </div>
             <div className="registrationInputField">
-              <label htmlFor="personalEmailId">Personal Email Id</label>
+              <label htmlFor="personalEmailId">Personal Email ID</label>
               <input
                 type="email"
                 autoComplete="off"
@@ -161,7 +161,7 @@ const Form = () => {
               <p>Social information</p>
             </div>
             <div className="registrationInputField">
-              <label htmlFor="linkedin">Linkedin</label>
+              <label htmlFor="linkedin">Linkedin Profile URL</label>
               <input
                 type="text"
                 autoComplete="off"
@@ -175,7 +175,7 @@ const Form = () => {
               />
             </div>
             <div className="registrationInputField">
-              <label htmlFor="github">Github</label>
+              <label htmlFor="github">Github Profile URL</label>
               <input
                 type="text"
                 autoComplete="off"
@@ -192,7 +192,7 @@ const Form = () => {
               <p>Survey information</p>
             </div>
             <div className="registrationInputField">
-              <label htmlFor="expectation">What Do You Expect From This Event ? </label>
+              <label htmlFor="expectation">What do you expect from this event ? </label>
               <textarea
                 onChange={handleChange}
                 onBlur={handleBlur}
