@@ -17,9 +17,11 @@ const initialValues = {
   kiitEmailId: "",
   personalEmailId: "",
   phoneNumber: "",
+  interestedField: "",
   linkedin: "",
   github: "",
   expectation: "",
+  
 };
 
 const Form = () => {
@@ -156,6 +158,28 @@ const Form = () => {
                 value={values.phoneNumber}
                 className={errors.phoneNumber && touched.phoneNumber ? "invalidInput" : ""}
               />
+            </div>
+            <div className="registrationInputField">
+              <label htmlFor="interestedField">Interested Field</label>
+              <select
+                type="text"
+                autoComplete="off"
+                id="interestedField"
+                name="interestedField"
+                placeholder="Please Select Your Interested Field"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.interestedField}
+                className={errors.interestedField && touched.interestedField ? "invalidInput" : ""}
+              >
+                <option value="#">Select Interested Field</option>
+                <option value="web-ui">Web Dev & UI/UX</option>
+                <option value="app-ui">App Dev & UI/UX</option>
+                <option value="cyber">Cyber Security</option>
+                <option value="cloud">Cloud</option>
+                <option value="ar-vr">AR/VR</option>
+                <option value="ai-ml">AI/ML</option>
+              </select>
             </div>
             <div className="registrationFormHeading formPadding">
               <p>Social information</p>
