@@ -1,11 +1,1 @@
-{
-  "functions": {
-    "api/**/*.js"
-  },
-  "builds": [
-    {
-      "src": "src/main.js",
-      "use": "@vercel/static"
-    }
-  ]
-}
+{ "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }] }

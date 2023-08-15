@@ -228,3 +228,47 @@ textarea:focus {
   top: 20%;
   position: absolute;
 } */
+
+
+
+
+
+/* Add these styles to your existing CSS */
+
+/* Apply styles to the select element */
+.registrationInputField select {
+  width: 100%;
+  height: 3.5rem;
+  background: #e1edff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-indent: 1rem;
+  border: 1px solid #ced4da; /* Add border for non-hover state */
+}
+
+/* Apply styles when hovering over the select element */
+.registrationInputField select:hover {
+  border: 1px solid #286fd9;
+}
+
+/* Apply styles when the select element is focused */
+.registrationInputField select:focus {
+  outline: 1px solid #286fd9;
+}
+
+/* Apply styles for invalid input state */
+.registrationInputField select.invalidInput {
+  background: #fdd8d8;
+  border: 1px solid #f94545;
+}
+
+/* Apply styles to the option elements within the select */
+.registrationInputField select option {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #000000;
+}
