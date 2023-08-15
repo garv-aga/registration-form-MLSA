@@ -1,6 +1,7 @@
 const express = require("express");
 const { connect, Schema, model } = require("mongoose");
 const dotenv = require('dotenv');
+const cors = require("cors");
 const Joi = require("joi");
 dotenv.config();
 const { MONGO_URI } = process.env;
@@ -9,6 +10,12 @@ console.log(MONGO_URI);
 const app = express();
 
 //For parsing the body as json and it is also important if you want to access body data as req.body.*
+app.use(
+    cors({
+        credentials: true,
+        origin: ['https://frontend.unknownclub.me', 'http://localhost:5173'],
+    })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -50,13 +57,13 @@ const registerSchema = Joi.object({
         'string.max': 'Phone Number should have at most 15 digits',
         'string.pattern.base': 'Phone Number should contain only digits'
     }),
-    linkedin: Joi.string().min(2).max(100),
+    linkedin: Joi.string().optional(),
     github: Joi.string().min(2).max(100).required().messages({
         'any.required': 'Github Required',
         'string.min': 'Github should have at least 2 characters',
         'string.max': 'Github should have at most 100 characters'
     }),
-    expectation: Joi.string(),
+    expectation: Joi.string().optional(),
 });
 
 //Registrations MongoDB Schema
@@ -123,8 +130,6 @@ const registrationSchema = new Schema({
     },
     linkedin: {
         type: String,
-        minlength: [2, 'Linkedin should have at least 2 characters'],
-        maxlength: [100, 'Linkedin should have at most 100 characters'],
         default: "None Given",
     },
     github: {
@@ -154,30 +159,28 @@ const reg = model('registration', registrationSchema);
 //API Endpoints for registrations
 app.post("/api/register", async (req, res) => {
     try {
-        const registerRequest = await registerSchema.validateAsync(req.body);
+        const { name, rollNumber, currentYear, branch, kiitEmailId, personalEmailId, phoneNumber, interestedField, linkedin, github, expectation } = req.body;
         const ip = req.ip;
         const host = req.get('host');
         const userAgent = req.get('user-agent');
-        const existingRegistrations = await reg.findOne({ kiitEmailId: registerRequest.kiitEmailId });
+        const existingRegistrations = await reg.findOne({ kiitEmailId: kiitEmailId });
         if (existingRegistrations) {
-            return res.status(409).json({message:"User already registered"});
+            return res.status(409).json({ message: "User already registered" });
         }
+        
         const registration = new reg({
-            ...registerRequest,
+            name, rollNumber, currentYear, branch, kiitEmailId, personalEmailId, phoneNumber, interestedField, linkedin, github, expectation,
             ip,
             host,
             userAgent,
         });
         await registration.save();
-        return res.status(200).json({message:"Success"});
+        return res.status(200).json({ message: "Success" });
     } catch (err) {
+        console.log(err);
         let errorMsg = "Invalid Data";
-        if (err.isJoi === true) {
-            err.status = 403;
-            errorMsg = err.message;
-        }
 
-        return res.status(err.status).json({message:errorMsg});
+        return res.status(err.status || 400).json({ message: errorMsg });
     }
 
 })

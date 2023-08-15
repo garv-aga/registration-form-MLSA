@@ -33,7 +33,7 @@ const Form = () => {
     onSubmit: async (values, action) => {
       let res;
       try {
-        res = await axios.post("/api/save-response", values);        
+        res = await axios.post("http://localhost:5000/api/register", values);        
       } catch (error) {
         errNotify(error);
       }
@@ -78,7 +78,7 @@ const Form = () => {
             <div className="registrationInputField">
               <label htmlFor="rollNumber">Roll Number</label>
               <input
-                type="number"
+                type="text"
                 autoComplete="off"
                 name="rollNumber"
                 id="rollNumber"
@@ -92,7 +92,7 @@ const Form = () => {
             <div className="registrationInputField">
               <label htmlFor="currentYear">Current Year of Study</label>
               <input
-                type="number"
+                type="text"
                 autoComplete="off"
                 id="currentYear"
                 name="currentYear"
@@ -148,7 +148,7 @@ const Form = () => {
             <div className="registrationInputField">
               <label htmlFor="phoneNumber">Phone Number</label>
               <input
-                type="number"
+                type="text"
                 autoComplete="off"
                 id="phoneNumber"
                 name="phoneNumber"
@@ -170,6 +170,7 @@ const Form = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.interestedField}
+                required
                 className={errors.interestedField && touched.interestedField ? "invalidInput" : ""}
               >
                 <option value="#">Select Interested Field</option>
