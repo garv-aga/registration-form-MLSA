@@ -33,9 +33,9 @@ const Form = () => {
     validationSchema: signUpSchema,
     onSubmit: async (values, action) => {
       let res;
-      
+
       try {
-        res = await axios.post("http://localhost:5000/api/register", values);        
+        res = await axios.post("http://localhost:5000/api/save-response", values);
       } catch (error) {
         errNotify(error);
       }
@@ -54,9 +54,9 @@ const Form = () => {
     <>
       <Toaster position="bottom-right" reverseOrder={false} />
       <div className="registrationForm">
-      <div className='registrationFormELLipse'>
-      <img src={docsIcon}/>
-      </div>
+        <div className='registrationFormELLipse'>
+          <img src={docsIcon} />
+        </div>
         <div className="registrationFormContainer">
           <form onSubmit={handleSubmit}>
             <div className="registrationFormHeading formFirstHeading">
@@ -233,15 +233,15 @@ const Form = () => {
             </div>
 
             {(errors.name && touched.name) ||
-            (errors.rollNumber && touched.rollNumber) ||
-            (errors.currentYear && touched.currentYear) ||
-            (errors.branch && touched.branch) ||
-            (errors.kiitEmailId && touched.kiitEmailId) ||
-            (errors.personalEmailId && touched.personalEmailId) ||
-            (errors.phoneNumber && touched.phoneNumber) ||
-            (errors.linkedin && touched.linkedin) ||
-            (errors.github && touched.github) || 
-            (errors.checkbox && touched.checkbox) ? (
+              (errors.rollNumber && touched.rollNumber) ||
+              (errors.currentYear && touched.currentYear) ||
+              (errors.branch && touched.branch) ||
+              (errors.kiitEmailId && touched.kiitEmailId) ||
+              (errors.personalEmailId && touched.personalEmailId) ||
+              (errors.phoneNumber && touched.phoneNumber) ||
+              (errors.linkedin && touched.linkedin) ||
+              (errors.github && touched.github) ||
+              (errors.checkbox && touched.checkbox) ? (
               <div className="registrationFormErrorMessage">
                 <svg
                   width="15"
@@ -259,12 +259,12 @@ const Form = () => {
               </div>
             ) : null}
             <div className="checkbox-container">
-              <input name="checkbox" id="checkbox" type="checkbox" 
+              <input name="checkbox" id="checkbox" type="checkbox"
                 checked={consentOnClick} onClick={() => setconsentOnclick((prev) => !prev)}
                 value={values.checkbox}
-                onChange={handleChange} 
+                onChange={handleChange}
                 className={errors.checkbox && touched.checkbox ? "Please consent to continue" : ""}
-                />
+              />
               <label onClick={() => setconsentOnclick((prev) => !prev)}>I consent to my data being shared with MLSA&apos;s sponsors and receive promotional content</label>
             </div>
             <div className="registrationFormButtonContainer">

@@ -12,6 +12,7 @@ const ResponseData = z.object({
   linkedin: z.string(),
   github: z.string(),
   expectation: z.string(),
+  checkbox: z.boolean(),
 });
 
 const EventResponseSchema = new mongoose.Schema({
@@ -25,6 +26,7 @@ const EventResponseSchema = new mongoose.Schema({
   linkedin: String,
   github: String,
   expectation: String,
+  checkbox: Boolean,
   ip: String,
   host: String,
   userAgent: String,
@@ -40,6 +42,10 @@ export default async function handler(req, res) {
 
   if (!body.expectation) {
     body.expectation = "None Given";
+  }
+
+  if (!body.github) {
+    body.github = "None Given";
   }
 
   if (!body.linkedin) {
