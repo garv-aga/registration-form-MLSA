@@ -159,7 +159,7 @@ const Form = () => {
                 className={errors.phoneNumber && touched.phoneNumber ? "invalidInput" : ""}
               />
             </div>
-            <div className="registrationInputField">
+            {/* <div className="registrationInputField">
               <label htmlFor="interestedField">Interested Field</label>
               <select
                 type="text"
@@ -181,9 +181,9 @@ const Form = () => {
                 <option value="ar-vr">AR/VR</option>
                 <option value="ai-ml">AI/ML</option>
               </select>
-            </div>
+            </div> */}
             <div className="registrationFormHeading formPadding">
-              <p>Social information</p>
+              <p>Social information  <span className="">( optional )</span></p>
             </div>
             <div className="registrationInputField">
               <label htmlFor="linkedin">Linkedin Profile URL</label>
@@ -214,7 +214,7 @@ const Form = () => {
               />
             </div>
             <div className="registrationFormHeading formPadding">
-              <p>Survey information</p>
+              <p>Survey information <span>( optional )</span></p>
             </div>
             <div className="registrationInputField">
               <label htmlFor="expectation">What do you expect from this event ? </label>

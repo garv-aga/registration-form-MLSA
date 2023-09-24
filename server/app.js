@@ -100,6 +100,7 @@ const registrationSchema = new Schema({
     },
     kiitEmailId: {
         type: String,
+        unique: [true, "You have already registered"],
         required: [true, 'KIIT Email Required'],
         validate: {
             validator: (value) => /^[A-Z0-9._%+-]+@kiit\.ac\.in$/i.test(value),
@@ -124,10 +125,10 @@ const registrationSchema = new Schema({
             message: 'Phone Number should contain only digits'
         }
     },
-    interestedField: {
-        type: String,
-        required: true,
-    },
+    // interestedField: {
+    //     type: String,
+    //     required: true,
+    // },
     linkedin: {
         type: String,
         default: "None Given",
