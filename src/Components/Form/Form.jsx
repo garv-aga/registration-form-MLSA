@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
@@ -17,21 +17,23 @@ const initialValues = {
   kiitEmailId: "",
   personalEmailId: "",
   phoneNumber: "",
-  interestedField: "",
+  // interestedField: "",
   linkedin: "",
   github: "",
   expectation: "",
-  
+  checkbox: null,
 };
 
 const Form = () => {
   const navigate = useNavigate();
+  const [consentOnClick, setconsentOnclick] = useState(false)
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
     initialValues: initialValues,
     validationSchema: signUpSchema,
     onSubmit: async (values, action) => {
       let res;
+      
       try {
         res = await axios.post("http://localhost:5000/api/register", values);        
       } catch (error) {
@@ -183,7 +185,7 @@ const Form = () => {
               </select>
             </div> */}
             <div className="registrationFormHeading formPadding">
-              <p>Social information  <span className="">( optional )</span></p>
+              <p>Social information  <span className="">{`( optional )`}</span></p>
             </div>
             <div className="registrationInputField">
               <label htmlFor="linkedin">Linkedin Profile URL</label>
@@ -214,7 +216,7 @@ const Form = () => {
               />
             </div>
             <div className="registrationFormHeading formPadding">
-              <p>Survey information <span>( optional )</span></p>
+              <p>Survey information <span>{`( optional )`}</span></p>
             </div>
             <div className="registrationInputField">
               <label htmlFor="expectation">What do you expect from this event ? </label>
@@ -238,7 +240,8 @@ const Form = () => {
             (errors.personalEmailId && touched.personalEmailId) ||
             (errors.phoneNumber && touched.phoneNumber) ||
             (errors.linkedin && touched.linkedin) ||
-            (errors.github && touched.github) ? (
+            (errors.github && touched.github) || 
+            (errors.checkbox && touched.checkbox) ? (
               <div className="registrationFormErrorMessage">
                 <svg
                   width="15"
@@ -255,6 +258,15 @@ const Form = () => {
                 <p>Check the data before submitting the form</p>
               </div>
             ) : null}
+            <div className="checkbox-container">
+              <input name="checkbox" id="checkbox" type="checkbox" 
+                checked={consentOnClick} onClick={() => setconsentOnclick((prev) => !prev)}
+                value={values.checkbox}
+                onChange={handleChange} 
+                className={errors.checkbox && touched.checkbox ? "Please consent to continue" : ""}
+                />
+              <label onClick={() => setconsentOnclick((prev) => !prev)}>I consent to my data being shared with MLSA&apos;s sponsors and receive promotional content</label>
+            </div>
             <div className="registrationFormButtonContainer">
               <button type="submit" className="submitBtn">
                 Submit

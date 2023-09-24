@@ -8,8 +8,9 @@ export const signUpSchema = Yup.object({
   kiitEmailId: Yup.string().email().required("Kiit Email Required"),
   personalEmailId: Yup.string().email().required("Personal Email Required"),
   phoneNumber: Yup.string().min(10).max(15).required("Phone Number Required").matches("^[0-9]*$"),
-  interestedField: Yup.string().required(),
+  // interestedField: Yup.string().required(),
   linkedin: Yup.string().min(2).max(100),
-  github: Yup.string().min(2).max(100).required("Github Required"),
+  github: Yup.string().min(2).max(100),
   expectation: Yup.string(),
+  checkbox: Yup.boolean().required("Please consent to continue"),
 });
